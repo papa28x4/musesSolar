@@ -225,6 +225,11 @@ a {
     overflow: hidden;}
     #landing-body .curved-bg .did-you-know h1{
       text-align: center;
+      /* color: #264377; */
+      color: #0c002b;
+    }
+    #landing-body .curved-bg .did-you-know p{
+      color:#0c002b;
     }
   #landing-body .curved-bg .did-you-know span:nth-child(1){
       position: absolute;
@@ -344,7 +349,8 @@ a {
   }
 
   .indicator.active{
-    background: rgba(0,0,0,0.75);
+    /* background: rgba(0,0,0,0.75); */
+    background-image: linear-gradient(90deg, #be2edd, #5f27cd); 
   }
 
   @media screen and (max-width: 768px){
