@@ -413,7 +413,7 @@ a {
       margin-bottom: 8rem;
       align-items: center;
       /* justify-content: space-between;  */
-      border: 1px solid green;
+      /* border: 1px solid green; */
       
     }
     #landing-body header .header-content > *{
@@ -422,7 +422,7 @@ a {
     #landing-body header .header-content .display-message{
       order: 5;
       text-align: center;
-      border: 1px solid red;
+      /* border: 1px solid red; */
      }
      #landing-body header .header-content .display-message .header-buttons {
       display: flex;
