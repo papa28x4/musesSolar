@@ -1,33 +1,163 @@
 $(document).ready(function() {
-  $("#name").on("focus", function() {
-    $(this).animate(
-      {
-        width: "320px"
-      },
-      500
-    );
-    $("#calc").animate(
-      {
-        left: "+=50"
-      },
-      500
-    );
-  });
-  $("#name").on("blur", function() {
-    console.log($(this));
-    $(this).animate(
-      {
-        width: "270px"
-      },
-      500
-    );
-    $("#calc").animate(
-      {
-        left: "-=50"
-      },
-      500
-    );
-  });
+
+        const pageOne =()=>{
+        const menu = document.querySelector('.menu');
+        const nav = document.querySelector('.nav-links')
+        const navLinks = document.querySelectorAll('.nav-links li')
+        const prev = document.querySelector('.left')
+        const next = document.querySelector('.right')
+        const placeholder = document.querySelector('.did-you-know p')
+        const indicatorBox = document.querySelector('.indicators_box')
+        let indicators = document.querySelectorAll('.indicator')
+        indicators = Array.from(indicators)
+        const funFacts = ['The amount of electricity you use is more important for solar electric system design than the square footage of your home. This is mainly because peoplyse’s use of electricity varies in so many different WebAssembly.addEventListener', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque in sed labore vero. Fugiat odio officiis quam illo animi adipisci minima molestiae saepe harum laboriosam itaque laborum aliquid, ea hic!','ipsum dolor sit amet consectetur adipisicing elit. Facilis officiis at ducimus illum ipsa, nam placeat aspernatur ut? Iste provident libero voluptas cupiditate, quia voluptatum reprehenderit labore minus omnis odit.',  'dolor, sit amet consectetur adipisicing elit. Accusamus dolore, nulla maiores eaque dolor temporibus quis officiis eos! Repellendus dolorem ratione quos et facilis neque inventore esse eligendi consectetur iure.']
+        let length = funFacts.length
+        let index = 0;
+       
+        menu.addEventListener('click', ()=>{
+            nav.classList.toggle('nav-active')
+            menu.classList.toggle('toggle')
+            navLinks.forEach((link, index)=>{
+                link.style.animation = link.style.animation? '' : `fade 0.5s ease forwards ${index / 5 + 0.5}s`
+            })
+        })
+        
+        const displayText =()=>{
+            indicators[index].classList.add('active')
+            placeholder.innerHTML = funFacts[index]
+        }
+        
+        indicatorBox.addEventListener('click', e =>{
+            
+            if(e.target.classList.contains('indicator')){
+                if(!e.target.classList.contains('active')){
+                    indicators[index].classList.remove('active')
+                    index = indicators.indexOf(e.target)
+                    displayText()
+                }
+            }
+        })
+
+        next.addEventListener('click', ()=>{
+            indicators[index].classList.remove('active')
+            if(index === length - 1){
+                index = 0
+            }else{
+                index++
+            }
+           displayText()
+        })
+
+        prev.addEventListener('click', ()=>{
+            indicators[index].classList.remove('active')
+            if(index === 0){
+                index = length - 1
+            }else{
+                index --
+            }
+            displayText()
+        })
+
+
+        }
+        
+
+
+        const TypeWriter = function(txtElement, words, wait){
+            this.txtElement = txtElement;
+            this.words = words;
+            this.txt = '';
+            this.wordIndex = 0;
+            this.wait = parseInt(wait, 10)
+            this.type();
+            this.isDeleting = false;
+        }
+
+       
+
+        function init(){
+            const txtElement = document.querySelector('.display-message h2');
+            const words = ["What if you could own your power?", "And never have another blackout?", "Welcome to our world of possibilities", "Tell us what you need to power", "We'll recommend what's best for you.", "Input your name then hit calculate to get started."];
+            const wait = 1000
+            new TypeWriter(txtElement, words, wait);
+        }
+
+        TypeWriter.prototype.type = function(){
+            
+            const current =this.wordIndex % this.words.length;
+            const fulltext = this.words[current]
+    
+            if(this.isDeleting){
+                this.txt = fulltext.substring(0, this.txt.length - 1)
+            }else{
+                
+                this.txt = fulltext.substring(0, this.txt.length+ 1)
+            }
+            
+            this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`
+            
+            let typeSpeed = 240
+            if(this.isDeleting){
+                typeSpeed /= 3;
+            }
+            
+            if(!this.isDeleting && this.txt === fulltext){
+                typeSpeed = this.wait;
+                this.isDeleting = true;
+            }else if(this.isDeleting && this.txt === ''){
+                this.isDeleting = false;
+                this.wordIndex++;
+                typeSpeed = 500;
+            }
+            setTimeout(()=>{
+                this.type()
+            }, typeSpeed)
+        }
+       
+
+       
+        
+        if(window.location.href.includes("index.html")){
+            init()
+            pageOne()
+        }
+         
+        
+       
+
+      // document.addEventListener('DOMContentLoaded', init)
+      
+      
+      
+  // $("#name").on("focus", function() {
+  //   $(this).animate(
+  //     {
+  //       width: "320px"
+  //     },
+  //     500
+  //   );
+  //   $("#calc").animate(
+  //     {
+  //       left: "+=50"
+  //     },
+  //     500
+  //   );
+  // });
+  // $("#name").on("blur", function() {
+  //   console.log($(this));
+  //   $(this).animate(
+  //     {
+  //       width: "270px"
+  //     },
+  //     500
+  //   );
+  //   $("#calc").animate(
+  //     {
+  //       left: "-=50"
+  //     },
+  //     500
+  //   );
+  // });
 
   let count = 3;
   let total = 0;
@@ -404,6 +534,7 @@ $(document).ready(function() {
   // createCharts('myChart_P','bar',dataEntry_appliances,dataEntry_powerConsumption, 'Your Power Consumption by Appliance' )
   // createCharts('myChart_S','line',dataEntry_states,dataEntry_sunhours, 'Sun Hours by State' )
 
+  
   let name = JSON.parse(localStorage.getItem("userData")) || "";
   $(".loading").on("click", function() {
     name = $("#name").val();
