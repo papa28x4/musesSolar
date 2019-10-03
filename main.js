@@ -283,19 +283,7 @@ $(document).ready(function() {
   let formTable = document.querySelector('#formTable')
 
   const createRow = () => {
-    count++;
-
-    // let newRow = `<div id="entry-${count}" class="entry"><tr>
-    // <td><select id="appliance-${count}" class="appliances" required>
-    //               <option value="" selected hidden>Selects</option>
-    //             </select></td>
-    //             <td><input id="qty-${count}" class="qty" value="1" min="0" max="999" type="number"></td>
-    //             <td><input id="rating-${count}" value=0 class="watts" type=text disabled/></td>
-    //             <td><input id="hours-${count}" class="hours" min="0" max="24" step="1" value="0" type="number"></td>
-    //            <td> <input  id="daily-${count}" class="daily" value="0"></td>
-    //             <td><button class="remove-row">X</button></td>
-    // </tr></div>`;
-      console.log(count)
+    count++;    
      let addRow = formTable.insertRow(count);
      addRow.innerHTML = `<tr class="removeMe" id="pleaseRemoveMe">
     <td><select id="appliance-${count}" class="appliances" required>
@@ -308,13 +296,11 @@ $(document).ready(function() {
                 <td><button class="remove-row">X</button></td>
     </tr>`;
 
-    // $("#entries").append(newRow);
-    // let element =  $('.appliances')
     populateList(ratings, $(".appliances"));
   };
 
   const populateList = (array, element) => {
-    // let select = element || $('.appliances')
+    
     element.select2({
       data: Object.keys(array)
     });
@@ -346,8 +332,7 @@ $(document).ready(function() {
   };
 
   $("#worksheet").on("change", ".appliances", function() {
-    //  console.log($(this).val())
-    //  console.log(this.id)
+   
     let sequence = this.id.split("-")[1];
 
     let index = Object.keys(ratings).indexOf($(this).val());
@@ -530,10 +515,6 @@ $(document).ready(function() {
       dataEntry_sunhours.push(states[key]);
     }
   };
-
-  // createCharts('myChart_P','bar',dataEntry_appliances,dataEntry_powerConsumption, 'Your Power Consumption by Appliance' )
-  // createCharts('myChart_S','line',dataEntry_states,dataEntry_sunhours, 'Sun Hours by State' )
-
   
   let name = JSON.parse(localStorage.getItem("userData")) || "";
   $(".loading").on("click", function() {
