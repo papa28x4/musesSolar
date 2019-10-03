@@ -4,7 +4,8 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit; 
+  user-select: none;}
 
 html {
   font-size: 62.5%; }
@@ -176,7 +177,7 @@ a {
       margin-top: 7rem;
       margin-right: 0;
       justify-content: space-between;
-      border: 1px solid black;
+      /* border: 1px solid black; */
      }
      
       #landing-body header .header-content .display-message .header-buttons button {
@@ -217,9 +218,14 @@ a {
     left: 50%;
     transform: translateX(-50%);
     padding: 5rem;
+    padding-top: 2rem;
     border-radius: 1rem;
+    line-height: 3rem;
     border: 0.3rem solid #28467c30; 
     overflow: hidden;}
+    #landing-body .curved-bg .did-you-know h1{
+      text-align: center;
+    }
   #landing-body .curved-bg .did-you-know span:nth-child(1){
       position: absolute;
       top: 0;
@@ -313,6 +319,9 @@ a {
       cursor: pointer;
       padding: 1%;
       border-radius: 50%;
+      outline: none;
+      width: 3rem;
+      height: 3rem;
   }
   .indicators_box{
     position: absolute;
@@ -417,7 +426,7 @@ a {
       margin-top: 7rem;
       margin-right: 5%;
       justify-content:center;
-      border: 1px solid black;
+      /* border: 1px solid black; */
      }
      #landing-body header .header-content .display-message .header-buttons .name {
       font-size: 1.8rem;
