@@ -27,6 +27,18 @@ a {
   text-decoration: none;
   color: inherit; }
 
+  ::-webkit-input-placeholder { /* Edge */
+    color: rgba(0, 0, 0, 0.8)
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(0, 0, 0, 0.8)
+  }
+  
+  ::placeholder {
+    color: rgba(0, 0, 0, 0.8)
+  }
+
 #landing-body header {
   min-height: 100vh;
   width: 100%;
@@ -222,7 +234,9 @@ a {
     border-radius: 1rem;
     line-height: 3rem;
     border: 0.3rem solid #28467c30; 
-    overflow: hidden;}
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
     #landing-body .curved-bg .did-you-know h1{
       text-align: center;
       color: #264377;
@@ -346,6 +360,7 @@ a {
     height: 15px;
     background: rgba(0,0,0,0.3);
     margin: 0 10px;
+    cursor: pointer;
   }
 
   .indicator.active{
