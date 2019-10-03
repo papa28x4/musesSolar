@@ -225,8 +225,8 @@ a {
     overflow: hidden;}
     #landing-body .curved-bg .did-you-know h1{
       text-align: center;
-      /* color: #264377; */
-      color: #0c002b;
+      color: #264377;
+      /* color: #0c002b; */
     }
     #landing-body .curved-bg .did-you-know p{
       color:#0c002b;
