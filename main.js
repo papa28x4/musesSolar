@@ -77,7 +77,7 @@ $(document).ready(function() {
 
         function init(){
             const txtElement = document.querySelector('.display-message h2');
-            const words = ["What if you could own your power?", "And never have another blackout?", "Welcome to our world of possibilities", "Tell us what you need to power", "We'll recommend what's best for you.", "Input your name then hit calculate to get started."];
+            const words = ["What if you could own your own power?", "And never experience another blackout?", "Welcome to our world of possibilities", "Tell us what you need to power;", "We'll recommend what's best for you.", "Input your name below & hit calculate to proceed."];
             const wait = 1000
             new TypeWriter(txtElement, words, wait);
         }
@@ -117,7 +117,7 @@ $(document).ready(function() {
 
        
         
-        if(window.location.href.includes("index.html")){
+        if(window.location.href.includes("index.html")|| window.location.href === "https://papa28x4.github.io/musesSolar/"){
             init()
             pageOne()
         }
