@@ -517,7 +517,7 @@ a {
   }
   @media screen and (max-width: 700px){
     #landing-body header .header-bar {
-      margin-top: 0.7rem;
+      margin-top: 1rem;
       width: 90%;
       grid-template-columns: 1fr max-content;
       justify-content: space-between; 
@@ -579,7 +579,6 @@ a {
       align-items: center;
       justify-content: center; 
       /* border: 1px solid green; */
-      
     }
     #landing-body header .header-content > *{
       text-align: center;
@@ -644,6 +643,32 @@ a {
     color: rgba(226,226,226, 1);
     text-align:center;
     font-size: 0.8em;
+   
+  }
+}
+
+@media screen and (max-width: 700px) and (orientation: landscape){
+  #landing-body header .header-content {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px;
+    margin-top: 2%;
+    margin-bottom: 8rem;
+    align-items: center;
+    justify-content: center; 
+    /* border: 1px solid green; */
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(226,226,226, 1);
+    text-align:center;
+    font-size: 1.5em;
+  }
+  ::placeholder {
+    
+    color: rgba(226,226,226, 1);
+    text-align:center;
+    font-size: 1.5em;
    
   }
 }
