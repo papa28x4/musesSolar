@@ -436,6 +436,7 @@ a {
       display: grid;
       width: 90%;
       grid-template-columns: 1fr;
+      grid-template-rows: 300px;
       margin-top: 0;
       margin-bottom: 8rem;
       align-items: center;
@@ -449,7 +450,7 @@ a {
     #landing-body header .header-content .display-message{
       order: 5;
       text-align: center;
-      /* border: 1px solid red; */
+      border: 1px solid red;
      }
      #landing-body header .header-content .display-message .header-buttons {
       display: flex;
