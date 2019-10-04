@@ -226,7 +226,8 @@ a {
           background-color: transparent; } */
           #landing-body header .header-content .display-message .header-buttons .calculate {
             border: 0.3rem solid #54b874;
-            background-color: transparent; }
+            background-color: transparent;
+            outline: none; }
             #landing-body header .header-content .display-message .header-buttons .calculate:hover {
               background-color: #54b874; }
 #landing-body .curved-bg {
