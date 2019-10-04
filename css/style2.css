@@ -382,7 +382,140 @@ a {
     background-image: linear-gradient(90deg, #be2edd, #5f27cd); 
   }
 
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 1024px){
+    #landing-body header .header-bar {
+      margin-top: 2rem;
+      width: 90%;
+      grid-template-columns: 1fr max-content;
+      justify-content: space-between; 
+      position: relative;
+    }
+    
+    #landing-body header .header-bar ul {
+      position: absolute;
+      right: 0px;
+      height: 78vh;
+      top: 7%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      opacity: 0;
+      transform: translateX(100%);
+    }
+   
+    #landing-body header .header-bar ul li{
+      opacity: 0;
+    }
+    #landing-body header .header-bar .menu{
+      display: block;
+      /* border: 1px solid red; */
+    }
+    #landing-body header .header-bar ul.nav-active{
+      opacity: 1;
+      transform: translateX(0%);
+      transition: all 0.5s ease-in;
+    }
+    @keyframes fade{
+      from{
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to{
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
+    .menu.toggle #line1{
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .menu.toggle #line2{
+      opacity: 0;
+    }
+    .menu.toggle #line3{
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    #landing-body header .header-content {
+      display: grid;
+      width: 90%;
+      grid-template-columns: 1fr;
+      grid-template-rows: 400px;
+      margin-top: 5%;
+      margin-bottom: 8rem;
+      align-items: center;
+      justify-content: center; 
+      /* border: 1px solid green; */
+      
+    }
+    #landing-body header .header-content > *{
+      text-align: center;
+      margin-bottom: 0;
+    }
+    #landing-body header .header-content .display-message{
+      order: 5;
+      text-align: center;
+      /* border: 1px solid red; */
+     }
+     #landing-body header .header-content .display-message .header-buttons {
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 6rem;
+      margin-right: 5%;
+      /* justify-content:center; */
+       /* border: 1px solid black; */
+     }
+     #landing-body header .header-content .display-message h1 {
+      font-size: 8rem;
+      line-height: 9rem;
+      /* border: 1px solid black; */
+    } 
+    #landing-body header .header-content .display-message h2 {
+      font-size: 3rem; 
+      /* border: 1px solid black; */
+    }
+     #landing-body header .header-content .display-message .header-buttons .name {
+      font-size: 1.8rem;
+      outline: none;
+      padding: 1% 5%;
+      width: 50%; 
+      /* margin-right: 10px;*/
+     } 
+     #landing-body header .header-content .display-message .header-buttons .name {
+      border: 0.3rem solid #54b874;
+      background-color: #54b874;
+      border-radius: 1rem;
+      color: white;
+      font-size: 1.2rem;
+      outline: none;
+      padding: 5% 2%;
+      width: 150%; 
+      margin-right: 10px; }
+      /* #landing-body header .header-content .display-message .header-buttons .learnmore:hover {
+        background-color: transparent; } */
+    svg{
+      /* border: 1px solid red; */
+      width: 80%;
+    }
+    #landing-body .curved-bg .did-you-know {
+      width: 90vw;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: rgba(226,226,226, 1);
+      text-align:center;
+      font-size: 2em;
+    }
+    ::placeholder {
+      /* color: rgba(0, 0, 0, 0.8) */
+      color: rgba(226,226,226, 1);
+      text-align:center;
+      font-size: 2em;
+      /* color: white; */
+    }
+
+  }
+  @media screen and (max-width: 700px){
     #landing-body header .header-bar {
       margin-top: 2rem;
       width: 90%;
@@ -502,13 +635,15 @@ a {
       width: 90vw;
   }
   ::-moz-placeholder { /* Firefox 19+ */
-    color: white;
-  }
-  ::placeholder {
-    /* color: rgba(0, 0, 0, 0.8) */
     color: rgba(226,226,226, 1);
     text-align:center;
     font-size: 0.8em;
-    /* color: white; */
+  }
+  ::placeholder {
+    
+    color: rgba(226,226,226, 1);
+    text-align:center;
+    font-size: 0.8em;
+   
   }
 }
