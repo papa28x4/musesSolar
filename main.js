@@ -118,7 +118,7 @@ $(document).ready(function() {
 
        
         
-        if(window.location.href.includes("index.html")|| window.location.href === "https://papa28x4.github.io/musesSolar/"){
+        if(window.location.href.includes("index.html")|| window.location.href === "https://papa28x4.github.io/musesSolar/" || window.location.href === "https://papa28x4.github.io/musesSolar/#" ){
             init()
             pageOne()
         }
