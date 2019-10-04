@@ -15,12 +15,15 @@ body {
   font-family: "Nunito", sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+
+}
 
 #landing-body {
   background: url(../assets/img/body-bg.jpg) repeat #54b874; 
   background-blend-mode: multiply;
   width: 100%;
+  
 }
 
 a {
@@ -28,16 +31,23 @@ a {
   color: inherit; }
 
   ::-webkit-input-placeholder { /* Edge */
-    color: rgba(0, 0, 0, 0.8)
+    color: white;
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: rgba(0, 0, 0, 0.8)
+    color: white;
   }
-  
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: white;
+  }
   ::placeholder {
-    color: rgba(0, 0, 0, 0.8)
+    /* color: rgba(0, 0, 0, 0.8) */
+    color: rgba(226,226,226, 1);
+    text-align:center;
+    font-size: 1em;
+    /* color: white; */
   }
+
 
 #landing-body header {
   min-height: 100vh;
@@ -206,7 +216,7 @@ a {
         color: white;
         font-size: 1.8rem;
         outline: none;
-        padding: 5% 10%;
+        padding: 5%;
         width: 150%; 
         margin-right: 10px; }
         /* #landing-body header .header-content .display-message .header-buttons .learnmore:hover {
@@ -370,16 +380,18 @@ a {
 
   @media screen and (max-width: 768px){
     #landing-body header .header-bar {
-      /* margin-top: 5rem; */
+      margin-top: 2rem;
       width: 90%;
       grid-template-columns: 1fr max-content;
       justify-content: space-between; 
+      position: relative;
     }
+    
     #landing-body header .header-bar ul {
       position: absolute;
       right: 0px;
       height: 78vh;
-      top: 7vh;
+      top: 7%;
       background: rgba(0, 0, 0, 0.3);
       display: flex;
       flex-direction: column;
@@ -427,8 +439,8 @@ a {
       margin-top: 0;
       margin-bottom: 8rem;
       align-items: center;
-      /* justify-content: space-between;  */
-      /* border: 1px solid green; */
+      justify-content: center; 
+      border: 1px solid green;
       
     }
     #landing-body header .header-content > *{
@@ -449,6 +461,11 @@ a {
       justify-content:center;
       /* border: 1px solid black; */
      }
+     #landing-body header .header-content .display-message h1 {
+      font-size: 6rem;
+      line-height: 9rem; }
+    #landing-body header .header-content .display-message h2 {
+      font-size: 2rem; }
      #landing-body header .header-content .display-message .header-buttons .name {
       font-size: 1.8rem;
       outline: none;
@@ -456,10 +473,32 @@ a {
       width: 50%; 
       /* margin-right: 10px;*/
      } 
-    /* svg{
-      display: none;
-    } */
+     #landing-body header .header-content .display-message .header-buttons .name {
+      border: 0.3rem solid #54b874;
+      background-color: #54b874;
+      border-radius: 1rem;
+      color: white;
+      font-size: 1.2rem;
+      outline: none;
+      padding: 5% 2%;
+      width: 150%; 
+      margin-right: 10px; }
+      /* #landing-body header .header-content .display-message .header-buttons .learnmore:hover {
+        background-color: transparent; } */
+    svg{
+      width: 80%;
+    }
     #landing-body .curved-bg .did-you-know {
       width: 90vw;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: white;
+  }
+  ::placeholder {
+    /* color: rgba(0, 0, 0, 0.8) */
+    color: rgba(226,226,226, 1);
+    text-align:center;
+    font-size: 0.8em;
+    /* color: white; */
   }
 }
