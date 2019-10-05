@@ -1,2 +1,2 @@
 # musesSolar
-Feature addition: Redesign of the Home Page
+Feature addition: Redesign of the Muses Solar Calculator Home Page
