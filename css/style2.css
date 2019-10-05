@@ -197,6 +197,7 @@ a {
         border-right: 2px solid white
       }
     #landing-body header .header-content .display-message .header-buttons {
+      position: relative;
       display: flex;
       width: 75%;
       margin-top: 7rem;
@@ -213,6 +214,7 @@ a {
         color: white;
         cursor: pointer; }
       #landing-body header .header-content .display-message .header-buttons .name {
+        
         border: 0.3rem solid #54b874;
         background-color: #54b874;
         border-radius: 1rem;
@@ -222,6 +224,17 @@ a {
         padding: 5%;
         width: 150%; 
         margin-right: 10px; }
+        #landing-body header .header-content .display-message .header-buttons .name.error{
+          border: 2px solid red;
+      }
+      
+      #errorMessage{
+          position: absolute;
+          top: 100%;
+          left: 5%;
+          font-size: 1em;
+          
+      }
         /* #landing-body header .header-content .display-message .header-buttons .learnmore:hover {
           background-color: transparent; } */
           #landing-body header .header-content .display-message .header-buttons .calculate {
@@ -514,6 +527,11 @@ a {
       font-size: 2em;
       /* color: white; */
     }
+    #errorMessage{
+      left: 15%;
+      font-size: 2.5vw;
+      
+  }
 
   }
   @media screen and (max-width: 700px){
@@ -647,6 +665,11 @@ a {
     font-size: 0.8em;
    
   }
+  #errorMessage{
+    left: 3%;
+    font-size: 3vw;
+    
+}
 }
 
 @media screen and (max-width: 700px) and (orientation: landscape){

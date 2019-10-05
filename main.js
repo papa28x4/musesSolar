@@ -527,7 +527,7 @@ $(document).ready(function() {
     } else {
       $("#name").addClass("error");
       $("#errorMessage").html(
-        "<span class='errMessage' style='color: red;'>Please Enter Your Name :)<span>"
+        "<span class='errMessage' style='color: red; text-align: center;'>Please Enter Your Name<span>"
       );
     }
   });
