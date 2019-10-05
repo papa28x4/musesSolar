@@ -62,7 +62,7 @@ a {
   align-items: center; }
  
   #landing-body header .header-bar {
-    margin-top: 5rem;
+    margin-top: 3rem;
     width: 80%;
     display: grid;
     grid-template-columns: max-content 1fr max-content;
@@ -72,12 +72,12 @@ a {
   }
     #landing-body header .header-bar ul {
       list-style-type: none;
-      width: 60%;
-      justify-self: center;
+      width: 40%;
+      justify-self: end;
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
-      column-gap: 4.5rem; }
+      justify-content: space-between;
+    }
       #landing-body header .header-bar ul li {
         font-size: 2rem;
         font-weight: 700;
@@ -399,6 +399,7 @@ a {
       background: rgba(0, 0, 0, 0.8);
       display: flex;
       flex-direction: column;
+      justify-content: space-evenly;
       align-items: center;
       width: 50%;
       opacity: 0;
@@ -532,6 +533,7 @@ a {
       background: rgba(0, 0, 0, 0.8);
       display: flex;
       flex-direction: column;
+      justify-content: space-evenly;
       align-items: center;
       width: 50%;
       opacity: 0;
@@ -671,4 +673,40 @@ a {
     font-size: 1.5em;
    
   }
+}
+
+@media screen and (max-width: 700px) and (orientation: portrait){
+  #landing-body header .header-content {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px;
+    margin-top: 2%;
+    margin-bottom: 8rem;
+    align-items: center;
+    justify-content: center; 
+    /* border: 1px solid green; */
+  }
+  #landing-body header .header-content .display-message{
+    margin-top: 2rem;
+   }
+ 
+}
+
+@media screen and (max-width: 510px) and (orientation: portrait){
+  #landing-body header .header-content {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 220px;
+    margin-top: 2%;
+    margin-bottom: 8rem;
+    align-items: center;
+    justify-content: center; 
+    /* border: 1px solid green; */
+  }
+  #landing-body header .header-content .display-message{
+    /* margin-top: 2rem; */
+   }
+ 
 }
