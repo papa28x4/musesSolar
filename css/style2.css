@@ -231,7 +231,7 @@ a {
       #errorMessage{
           position: absolute;
           top: 100%;
-          left: 5%;
+          left: 1%;
           font-size: 1em;
           
       }
@@ -395,7 +395,7 @@ a {
     background-image: linear-gradient(90deg, #be2edd, #5f27cd); 
   }
 
-  @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1090px){
     #landing-body header .header-bar {
       margin-top: 2rem;
       width: 90%;
@@ -528,8 +528,8 @@ a {
       /* color: white; */
     }
     #errorMessage{
-      left: 15%;
-      font-size: 2.5vw;
+      left: 20%;
+      font-size: 2.2vw;
       
   }
 
