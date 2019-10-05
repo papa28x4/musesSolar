@@ -91,10 +91,11 @@ button:hover{
     display: inline-block;
     padding: 0.6em 1.3em;
     border-radius: 2em;
-    background: orange;
+    /* background: orange; */
     color: white;
     font-weight: bold;
     cursor: pointer;
+    background-color: #264377;
 }
 
 
@@ -317,16 +318,16 @@ button:hover{
     font-size: 1.4rem;
 }
 
-.headings p:nth-child(1){
-    /* margin-left: 4%; */
+/* .headings p:nth-child(1){
+    margin-left: 4%; 
 }
 
 .headings p:nth-child(2){
-    /* margin-left: 0.5%; */
+    margin-left: 0.5%;
 }
 .headings p:nth-child(3){
-    /* margin-left: -2%; */
-}
+    margin-left: -2%;
+} */
 
 
 input{
@@ -468,10 +469,7 @@ table.buttontable td:nth-child(3){
     /* just this up */
 }
 
-.entry {
-    /* grid-gap: 1rem;
-    grid-template-columns: 1fr 4fr 1fr 1fr 1fr 1fr; */
-}
+
 
 }
 
